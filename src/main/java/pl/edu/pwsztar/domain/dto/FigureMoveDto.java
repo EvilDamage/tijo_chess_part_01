@@ -1,16 +1,14 @@
 package pl.edu.pwsztar.domain.dto;
 
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 import pl.edu.pwsztar.domain.enums.FigureType;
 
-import java.io.Serializable;
-
-@NoArgsConstructor
+@Builder(toBuilder = true)
 @Getter
-@ToString
-public class FigureMoveDto implements Serializable {
+@EqualsAndHashCode
+@NoArgsConstructor
+@AllArgsConstructor
+public class FigureMoveDto{
     private String source;
     private String destination;
     private FigureType type;
